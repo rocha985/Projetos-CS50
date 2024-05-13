@@ -1,0 +1,2 @@
+Withh an average of energy = 0.65, valence = 0.48, danceability = 0.71, i would characterize their audio aura as yellow.
+A better way of doing so would be by creating a short quiz to validate the input of the previous method.

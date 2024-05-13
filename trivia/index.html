@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function check1(button) {
+                var answer = button.getAttribute('data-answer');
+                var response = document.getElementById('response');
+
+                if (answer === 'correct') {
+                    button.style.backgroundColor = 'green';
+                    response.innerHTML = 'Correct!';
+                } else {
+                    button.style.backgroundColor = 'red';
+                    response.innerHTML = 'Incorrect';
+                }
+            }
+
+
+            function check2() {
+                var input = document.getElementById('text-answer');
+                var response = document.getElementById('text-response');
+                var answer = input.value;
+
+                if (answer === '1945') {
+                    input.style.backgroundColor = 'green';
+                    response.innerHTML = 'Correct!';
+                } else {
+                    input.style.backgroundColor = 'red';
+                    response.innerHTML = 'Incorrect!';
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>How many days are in a week?</h3>
+                <button data-answer="incorrect" onclick="check1(this)">10</button>
+                <button data-answer="correct" onclick="check1(this)">7</button>
+                <button data-answer="incorrect" onclick="check1(this)">5</button>
+                <button data-answer="incorrect" onclick="check1(this)">3</button>
+                <div id="response"></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>When did World War II end?</h3>
+                <input type="text" id="text-answer">
+                <button onclick="check2()">Confirm Answer</button>
+                <div id="text-response"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
